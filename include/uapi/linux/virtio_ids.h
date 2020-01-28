@@ -48,6 +48,11 @@
 #define VIRTIO_ID_FS           26 /* virtio filesystem */
 #define VIRTIO_ID_PMEM         27 /* virtio pmem */
 #define VIRTIO_ID_MAC80211_HWSIM 29 /* virtio mac80211-hwsim */
-#define VIRTIO_ID_WL           30 /* virtio wayland */
+#define VIRTIO_ID_WL_LEGACY    30 /* virtio wayland */
+#define VIRTIO_ID_TPM_LEGACY   31 /* virtio wayland */
+
+/* Chrome OS-specific devices */
+#define VIRTIO_ID_WL           63 /* virtio wayland */
+#define VIRTIO_ID_TPM          62 /* virtio tpm */
 
 #endif /* _LINUX_VIRTIO_IDS_H */
