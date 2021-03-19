@@ -542,7 +542,7 @@ static ssize_t vfd_out_locked(struct virtwl_vfd *vfd, char __user *buffer,
 		 * with do_mmap()->virtwl_vfd_mmap(), which takes vfd->lock
 		 * under mm->mmap_sem.
 		 */
-		if (probe_user_write(buffer + read_count, buf, to_read)) {
+		if (copy_to_user_nofault(buffer + read_count, buf, to_read)) {
 			read_count = -EFAULT;
 			break;
 		}
